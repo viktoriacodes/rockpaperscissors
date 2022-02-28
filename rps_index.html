@@ -6,9 +6,36 @@ Rock Paper Scissors
 </title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="rps_script.js"></script>
+
+<link rel="stylesheet" type="text/css" href="rps_style.css"></link>
+<link rel="stylesheet" type="text/css" href="rps_resetcss.css"></link>
+<script src="https://kit.fontawesome.com/3992b5813b.js" crossorigin="anonymous"></script>
+<script src="rps_script.js" defer></script>
 </head>
 <body>
-    <!-- <button onclick="computerPlay()">Start</button> -->
+<div class="container">
+    <div id="startgame">
+        <h1 id="result">ROCK, PAPER OR SCISSORS?</h1>
+        <p id="vs-text"></p>
+        <p id="scorestable">
+        <span>Human: <strong id="playerscore">0</strong></span>
+        <span>Computer: <strong id="aiscore">0</strong></span>
+        </p>
+    <button class="choices" type="button" onclick="playGame(this)"><p class="select" style="display:none;">rock</p><i class="fas fa-hand-rock"></i></button>
+    <button class="choices" type="button" onclick="playGame(this)"><p class="select" style="display:none;">paper</p><i class="fas fa-hand-paper"></i></button>
+    <button class="choices" type="button" onclick="playGame(this)"><p class="select" style="display:none;">scissors</p><i class="fas fa-hand-scissors"></i></button>
+    <div>
+        <button type="button" id="reset" onClick="window.location.reload();">Reset the Game</button>
+    </div>
+    </div>
+   <div id="endgame">
+       <h1 id ="result"></h1>
+       <span>Human: <strong id="playerscore">0</strong></span>
+       <span>Computer: <strong id="aiscore">0</strong></span>
+       <br>
+       <br>
+       <button id="newgame" type="button" onClick="window.location.reload();">New Game</button>
+   </div>
+</div>
 </body>
 <html>
